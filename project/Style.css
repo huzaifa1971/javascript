@@ -1,0 +1,20 @@
+
+#shape{
+
+    background-color: red;
+    display: none;
+    position: relative;
+    max-width: 100%; 
+    max-height: 100%;
+}
+#pagesize {
+    width: 80%; 
+    height: 80%;
+    margin: 0 auto; 
+    position: relative; 
+}
+
+.clearFloating
+{
+    clear:both;
+}

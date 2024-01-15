@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="textinput">
+    <button id="change-it">Change it</button>
+    <p id="ptext">This is it</p>
+
+    <script>
+
+        document.getElementById("change-it").onclick = function(){
+
+           var textentered ="";
+           textentered = document.getElementById("textinput").value;
+           document.getElementById("ptext").innerHTML = textentered;
+        }
+
+    </script>
+</body>
+</html>

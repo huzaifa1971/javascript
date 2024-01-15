@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Guess the number between 0 to 5</p>
+    
+    <form>
+        <label>Select Number = </label>
+        <select id="numberentered">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <button id="guessbutton">Guess!</button>
+    </form>
+    <script>
+
+        function doAguess (correctanswer){
+
+            var guessbutton = Math.random();
+            guessbutton = guessbutton * 6;
+            guessbutton = Math.floor;
+
+            if(guessbutton == correctanswer){
+
+                return (true);
+
+            } else{
+
+                return(false);
+
+            }
+
+        }
+
+        document.getElementById("guessbutton").onclick = function(){
+
+            var mynumber = document.getElementById("numberentered").value;
+            var gotit = false;
+            var numberofguesses = 1;
+
+            while (gotit == false){
+
+                if(doAguess(mynumber) == true){
+
+                    gotit = true;
+                    alert("Got it! It was " + mynumber + " It tooks " + mynumber + " to guess.")
+
+                } else {
+
+                    numberofguesses++;
+
+                }
+
+            }
+
+        }
+
+    </script>
+</body>
+</html>

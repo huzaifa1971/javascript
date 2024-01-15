@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reaction Time Game</title>
+</head>
+<body>
+    <h1>Reaction Time Game</h1>
+    <button id="startButton">Start Game</button>
+    <button id="exitButton" style="display: none;">Exit Game</button>
+    <p id="reactionTime"></p>
+
+    <script>
+        let gameRunning = false;
+        let startTime;
+        let endTime;
+
+        const startButton = document.getElementById('startButton');
+        const exitButton = document.getElementById('exitButton');
+        const reactionTimeDisplay = document.getElementById('reactionTime');
+
+        function startGame() {
+            gameRunning = true;
+            startTime = Date.now();
+            exitButton.style.display = 'inline';
+            startButton.style.display = 'none';
+            generateShape();
+        }
+
+        function stopGame() {
+            if (gameRunning) {
+                gameRunning = false;
+                endTime = Date.now();
+                exitButton.style.display = 'none';
+                startButton.style.display = 'inline';
+                const reactionTime = (endTime - startTime) / 1000; // in seconds
+                reactionTimeDisplay.textContent = `Total Time Played: ${reactionTime.toFixed(2)} seconds`;
+            }
+        }
+
+        function generateShape() {
+            if (gameRunning) {
+                // Generate a circle or a box here and add event listeners
+                // When the shape is clicked, calculate and display reaction time
+            }
+        }
+
+        startButton.addEventListener('click', startGame);
+        exitButton.addEventListener('click', stopGame);
+    </script>
+</body>
+</html>
